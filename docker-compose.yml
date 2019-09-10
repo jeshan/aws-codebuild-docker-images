@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  aws-codebuild-python-3-7-1:
+    image: jeshan/aws-codebuild-python:3.7.1
+    build:
+      context: ubuntu/python/3.7.1
+      dockerfile: Dockerfile
+
+  docker18090:
+    image: aws/codebuild/docker:18.09.0
+    build:
+      context: ubuntu/docker/18.09.0
+      dockerfile: Dockerfile
+
+  standard:
+    image: aws/codebuild/standard:1.0
+    build:
+      context: ubuntu/standard/1.0
